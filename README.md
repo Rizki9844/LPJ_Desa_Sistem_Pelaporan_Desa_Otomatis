@@ -1,4 +1,3 @@
-Markdown
 <div align="center">
 
 # 🏛️ LPJ Desa
@@ -57,28 +56,33 @@ src/
 ├── pages/          # Halaman utama (Lazy-loaded)
 ├── styles/         # Arsitektur CSS (@layer base, components, layout, pages)
 └── utils/          # Logic helper & document generators
+```
 </details>
+<details>
+<summary><b>🚀 Instalasi & Development</b></summary>
 
-🚀 Instalasi & Development
 Prasyarat: Node.js v18+ dan npm atau yarn.
 
-Bash
-# 1. Clone repository
-git clone [https://github.com/rizkimalikfajar/lpj-desa.git](https://github.com/rizkimalikfajar/lpj-desa.git)
+```
+1. Clone repository
+git clone [https://github.com/Rizki9844/LPJ_Desa_Sistem_Pelaporan_Desa_Otomatis.git](https://github.com/Rizki9844/LPJ_Desa_Sistem_Pelaporan_Desa_Otomatis.git)
 
-# 2. Masuk ke direktori
+2. Masuk ke direktori
 cd lpj-desa
 
-# 3. Install dependencies
+3. Install dependencies
 npm install
 
-# 4. Setup environment (buat file .env di root)
-# Tambahkan: 
-# VITE_SUPABASE_URL=your_url
-# VITE_SUPABASE_ANON_KEY=your_key
+4. Setup environment (buat file .env di root)
+Tambahkan: 
+VITE_SUPABASE_URL=your_url
+VITE_SUPABASE_ANON_KEY=your_key
 
-# 5. Jalankan server lokal
+5. Jalankan server lokal
 npm run dev
+```
+</details>
+
 <div align="center">
 <p><b>Hak Cipta © 2026 Rizki Malik Fajar (Vibecode).</b></p>
 <p><i>Dikembangkan sebagai bagian dari inovasi teknologi di lingkungan Pemerintah Desa.</i></p>
