@@ -1,0 +1,198 @@
+/* ============================================
+   LPJ PREVIEW
+   ============================================ */
+
+/* ── First definition (base styles) ── */
+.lpj-preview {
+    background: white;
+    color: #1a1a1a;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 48px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-xl);
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+.lpj-preview h1 {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.lpj-preview h2 {
+    font-size: 1.15rem;
+    text-align: center;
+    margin-bottom: 24px;
+    font-weight: 500;
+}
+
+.lpj-preview h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 28px 0 12px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.lpj-preview table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+}
+
+.lpj-preview table th,
+.lpj-preview table td {
+    padding: 8px 12px;
+    border: 1px solid #d1d5db;
+    text-align: left;
+    font-size: 0.82rem;
+}
+
+.lpj-preview table th {
+    background: #f3f4f6;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+}
+
+.lpj-preview .text-right {
+    text-align: right;
+}
+
+.lpj-preview .total-row {
+    font-weight: 700;
+    background: #f9fafb;
+}
+
+.lpj-preview .signature-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.lpj-preview .signature-block {
+    width: 200px;
+}
+
+.lpj-preview .signature-block p:first-child {
+    margin-bottom: 80px;
+}
+
+.lpj-preview .signature-block .name {
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+/* ── Override (refined styles) ── */
+.lpj-preview {
+    background: white;
+    color: #111;
+    padding: 40px 48px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-xl);
+    font-size: 0.85rem;
+    line-height: 1.7;
+}
+
+.lpj-preview h1 {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 4px;
+    color: #111;
+}
+
+.lpj-preview h2 {
+    font-size: 1.1rem;
+    text-align: center;
+    color: #333;
+}
+
+.lpj-preview h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 28px 0 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #e5e7eb;
+    color: #111;
+}
+
+.lpj-preview table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-size: 0.82rem;
+}
+
+.lpj-preview th,
+.lpj-preview td {
+    padding: 10px 14px;
+    border: 1px solid #d1d5db;
+    text-align: left;
+}
+
+.lpj-preview th {
+    background: #f3f4f6;
+    font-weight: 600;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #374151;
+}
+
+.lpj-preview .text-right {
+    text-align: right;
+}
+
+.lpj-preview .total-row td {
+    background: #eef2ff;
+    font-weight: 700;
+}
+
+.lpj-preview .signature-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+    padding: 0 40px;
+}
+
+.lpj-preview .signature-block {
+    text-align: center;
+}
+
+.lpj-preview .signature-block .name {
+    margin-top: 80px;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+    .lpj-preview {
+        padding: 24px 16px;
+        overflow-x: auto;
+    }
+
+    .lpj-preview table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .lpj-preview .signature-section {
+        flex-direction: column;
+        gap: 40px;
+        padding: 0;
+    }
+
+    .lpj-preview .signature-block {
+        width: 100%;
+        max-width: 200px;
+        margin: 0 auto;
+    }
+}

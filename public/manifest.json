@@ -1,0 +1,17 @@
+{
+    "name": "Sistem Pelaporan Desa Otomatis",
+    "short_name": "LPJ Desa",
+    "description": "Sistem Pembuatan Laporan Pertanggungjawaban (LPJ) Desa secara otomatis",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#f8fafc",
+    "theme_color": "#6366f1",
+    "icons": [
+        {
+            "src": "/favicon-circle.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+}

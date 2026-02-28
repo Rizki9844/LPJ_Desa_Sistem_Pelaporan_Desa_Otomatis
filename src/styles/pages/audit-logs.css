@@ -1,0 +1,302 @@
+/* ═══════════════════════════════════════════
+   Audit Log Styles
+   ═══════════════════════════════════════════ */
+
+/* ── Log List Container ── */
+.audit-log-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* ── Log Item ── */
+.audit-log-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border-primary);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.audit-log-item:hover {
+    border-color: var(--primary-200);
+}
+
+.audit-log-item.expanded {
+    border-color: var(--primary-300);
+    box-shadow: 0 2px 12px rgba(99, 102, 241, 0.08);
+}
+
+/* ── Log Header (Clickable) ── */
+.audit-log-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    cursor: pointer;
+    gap: 12px;
+    transition: background 0.15s;
+}
+
+.audit-log-header:hover {
+    background: var(--bg-secondary);
+}
+
+.audit-log-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.audit-log-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* ── Action Badge ── */
+.audit-action-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 3px 10px;
+    border-radius: var(--radius-full);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+.audit-action-insert {
+    background: rgba(16, 185, 129, 0.1);
+    color: #10b981;
+}
+
+.audit-action-update {
+    background: rgba(245, 158, 11, 0.1);
+    color: #f59e0b;
+}
+
+.audit-action-delete {
+    background: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+}
+
+/* ── Table Badge ── */
+.audit-log-table-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 3px 8px;
+    border-radius: var(--radius-sm);
+    background: var(--bg-tertiary);
+    color: var(--text-secondary);
+    font-size: 0.72rem;
+    font-weight: 500;
+}
+
+.audit-log-record-id {
+    font-size: 0.7rem;
+    color: var(--text-tertiary);
+    font-family: monospace;
+    font-weight: 600;
+}
+
+/* ── Meta Info ── */
+.audit-log-meta {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.audit-log-user,
+.audit-log-time {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.72rem;
+    color: var(--text-tertiary);
+    white-space: nowrap;
+}
+
+.audit-log-relative {
+    color: var(--primary-400);
+    font-style: italic;
+}
+
+.audit-log-expand {
+    color: var(--text-tertiary);
+    display: flex;
+    align-items: center;
+}
+
+/* ── Detail / Diff ── */
+.audit-log-detail {
+    border-top: 1px solid var(--border-primary);
+    padding: 14px 16px;
+    background: var(--bg-secondary);
+    overflow: hidden;
+}
+
+.audit-diff-empty {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    font-style: italic;
+}
+
+.audit-diff-table {
+    font-size: 0.78rem;
+    width: 100%;
+}
+
+.audit-diff-header {
+    display: grid;
+    grid-template-columns: 140px 1fr 1fr;
+    gap: 8px;
+    padding: 6px 8px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    border-bottom: 2px solid var(--border-primary);
+    text-transform: uppercase;
+    font-size: 0.68rem;
+    letter-spacing: 0.04em;
+}
+
+.audit-diff-row {
+    display: grid;
+    grid-template-columns: 140px 1fr 1fr;
+    gap: 8px;
+    padding: 5px 8px;
+    border-bottom: 1px solid var(--border-primary);
+    transition: background 0.15s;
+}
+
+.audit-diff-row.changed {
+    background: rgba(245, 158, 11, 0.04);
+}
+
+.audit-diff-key {
+    font-weight: 600;
+    color: var(--text-secondary);
+    font-family: monospace;
+    font-size: 0.74rem;
+}
+
+.audit-diff-val {
+    color: var(--text-primary);
+    word-break: break-word;
+}
+
+.audit-diff-old {
+    color: var(--danger-500);
+    text-decoration: line-through;
+    opacity: 0.8;
+}
+
+.audit-diff-new {
+    color: var(--accent-500);
+    font-weight: 600;
+}
+
+/* ── Role Badges (used in Header) ── */
+.role-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    padding: 1px 7px;
+    border-radius: var(--radius-full);
+    font-size: 0.62rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.role-badge-admin {
+    background: rgba(99, 102, 241, 0.12);
+    color: #6366f1;
+}
+
+.role-badge-operator {
+    background: rgba(16, 185, 129, 0.12);
+    color: #10b981;
+}
+
+.role-badge-kades {
+    background: rgba(245, 158, 11, 0.12);
+    color: #f59e0b;
+}
+
+/* ── Read-Only Banner ── */
+.readonly-banner {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+    background: rgba(245, 158, 11, 0.08);
+    border: 1px solid rgba(245, 158, 11, 0.2);
+    border-radius: var(--radius-lg);
+    margin-bottom: 16px;
+    font-size: 0.82rem;
+    color: #f59e0b;
+    font-weight: 500;
+}
+
+.readonly-banner svg {
+    flex-shrink: 0;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+    .audit-log-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .audit-log-right {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .audit-log-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    .audit-diff-header,
+    .audit-diff-row {
+        grid-template-columns: 100px 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .audit-diff-header,
+    .audit-diff-row {
+        grid-template-columns: 80px 1fr;
+    }
+
+    .audit-diff-header > :nth-child(3),
+    .audit-diff-row > :nth-child(3) {
+        grid-column: 2;
+    }
+}
+
+/* ── Dark Mode ── */
+[data-theme="dark"] .audit-log-item {
+    border-color: var(--border-primary);
+}
+
+[data-theme="dark"] .audit-log-item.expanded {
+    border-color: var(--primary-600);
+    box-shadow: 0 2px 12px rgba(99, 102, 241, 0.12);
+}
+
+[data-theme="dark"] .audit-diff-row.changed {
+    background: rgba(245, 158, 11, 0.06);
+}
+
+[data-theme="dark"] .readonly-banner {
+    background: rgba(245, 158, 11, 0.06);
+    border-color: rgba(245, 158, 11, 0.15);
+}

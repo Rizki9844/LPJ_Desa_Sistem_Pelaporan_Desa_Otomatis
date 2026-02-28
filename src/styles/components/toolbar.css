@@ -1,0 +1,168 @@
+/* ============================================
+   TOOLBAR — Page Toolbar, Search, Export
+   ============================================ */
+
+/* ── Page Toolbar ── */
+.page-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.page-toolbar-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.page-toolbar-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* ── Search Input ── */
+.search-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-input-wrapper svg {
+    position: absolute;
+    left: 12px;
+    width: 16px;
+    height: 16px;
+    color: var(--text-tertiary);
+    pointer-events: none;
+}
+
+.search-input {
+    padding-left: 36px;
+    min-width: 260px;
+}
+
+/* ── Page Toolbar Override ── */
+.page-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.page-toolbar-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+    flex-wrap: wrap;
+}
+
+.page-toolbar-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* ── Export Dropdown ── */
+.export-dropdown {
+    display: inline-flex;
+    position: relative;
+}
+
+.export-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 0;
+    z-index: 9999;
+    min-width: 200px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-primary);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    padding: 6px;
+    backdrop-filter: blur(12px);
+}
+
+.export-dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 10px 12px;
+    border: none;
+    background: transparent;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all 0.15s ease;
+    text-align: left;
+}
+
+.export-dropdown-item:hover:not(:disabled) {
+    background: var(--bg-tertiary);
+}
+
+.export-dropdown-item:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.export-dropdown-item-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.export-dropdown-item-label {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.export-dropdown-item-desc {
+    font-size: 0.7rem;
+    color: var(--text-tertiary);
+}
+
+.export-dropdown-divider {
+    height: 1px;
+    background: var(--border-primary);
+    margin: 4px 8px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+    .page-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .page-toolbar-right {
+        justify-content: flex-end;
+    }
+
+    .search-input {
+        min-width: 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-input {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .export-dropdown-menu {
+        position: fixed;
+        top: auto;
+        right: 12px;
+        left: 12px;
+        min-width: 0;
+    }
+}
