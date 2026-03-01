@@ -15,6 +15,7 @@
     "vite": "^7.3.1"
   },
   "dependencies": {
+    "@sentry/react": "^10.40.0",
     "@supabase/supabase-js": "^2.96.0",
     "docx": "^9.5.3",
     "file-saver": "^2.0.5",

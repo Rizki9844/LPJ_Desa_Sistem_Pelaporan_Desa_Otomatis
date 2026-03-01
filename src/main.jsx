@@ -1,3 +1,6 @@
+// Sentry harus diinisialisasi SEBELUM React render
+import './lib/sentry';
+
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './styles/index.css'
